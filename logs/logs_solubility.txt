@@ -1,0 +1,43 @@
+2026-10-23 01:06:54,703 solubility Audit: {'raw_rows': 1128, 'missing_smiles_or_target': 0, 'invalid_smiles': 0, 'parsed_valid_rows': 1128, 'unique_canonical_structures': 1117, 'structures_with_multiple_records': 11, 'duplicate_rows_averaged_away': 10, 'inconsistent_duplicate_structures_removed': 1, 'clean_molecules': 1116, 'target_mean': -3.053306451612903, 'target_std': 2.0935810715882486, 'target_min': -11.6, 'target_max': 1.58}
+2026-10-23 01:06:54,789 deepchem.utils Skipped loading some Pytorch utilities, missing a dependency. No module named 'torch'
+2026-10-23 01:06:54,841 deepchem.feat.molecule_featurizers.rdkit_descriptors No normalization for SPS. Feature removed!
+2026-10-23 01:06:54,843 deepchem.feat.molecule_featurizers.rdkit_descriptors No normalization for AvgIpc. Feature removed!
+2026-10-23 01:06:54,903 deepchem.models Skipped loading some Tensorflow models, missing a dependency. No module named 'tensorflow'
+2026-10-23 01:06:54,938 deepchem.models Skipped loading some PyTorch models, missing a dependency. No module named 'torch'
+2026-10-23 01:06:54,944 deepchem.models No module named 'torch'
+2026-10-23 01:06:54,950 deepchem.models Skipped loading modules with pytorch-geometric dependency, missing a dependency. No module named 'torch'
+2026-10-23 01:06:54,953 deepchem.models Skipped loading modules with pytorch-lightning dependency, missing a dependency. No module named 'torch'
+2026-10-23 01:06:54,964 deepchem.models Skipped loading some Jax models, missing a dependency. No module named 'jax'
+2026-10-23 01:06:54,973 deepchem.metalearning Skipped loading some PyTorch models, missing a dependency. No module named 'tensorflow'
+2026-10-23 01:06:55,076 deepchem.splits.splitters About to generate scaffolds
+2026-10-23 01:06:55,076 deepchem.splits.splitters Generating scaffold 0/1116
+2026-10-23 01:06:55,260 deepchem.splits.splitters Generating scaffold 1000/1116
+2026-10-23 01:06:55,289 deepchem.splits.splitters About to sort in scaffold sets
+2026-10-23 01:07:01,546 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:01,552 solubility Validation mean_baseline              MAE=1.824 RMSE=2.435 R2=-0.119
+2026-10-23 01:07:01,560 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:01,777 solubility Validation ridge_fp_alpha1            MAE=1.526 RMSE=1.930 R2=0.297
+2026-10-23 01:07:01,784 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:01,977 solubility Validation ridge_fp_alpha10           MAE=1.251 RMSE=1.611 R2=0.510
+2026-10-23 01:07:01,983 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:02,103 solubility Validation ridge_fp_alpha100          MAE=1.414 RMSE=1.826 R2=0.371
+2026-10-23 01:07:02,109 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:03,019 solubility Validation rf_fp_leaf1                MAE=1.323 RMSE=1.687 R2=0.463
+2026-10-23 01:07:03,027 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:06,090 solubility Validation rf_fp_leaf1_allfeatures    MAE=1.365 RMSE=1.747 R2=0.424
+2026-10-23 01:07:06,090 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:06,898 solubility Validation rf_descriptors             MAE=0.742 RMSE=0.990 R2=0.815
+2026-10-23 01:07:06,908 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:08,728 solubility Validation rf_fp_plus_descriptors     MAE=0.721 RMSE=0.961 R2=0.826
+2026-10-23 01:07:08,729 solubility Selected by validation MAE: rf_fp_plus_descriptors
+2026-10-23 01:07:08,738 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:08,760 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:09,005 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:09,225 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:09,483 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:10,682 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:15,921 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:16,782 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:07:20,288 solubility TEST rf_fp_plus_descriptors: MAE=0.598 RMSE=0.749 R2=0.810
+2026-10-23 01:07:21,596 solubility Done in 27.1s
+This module requires PyTorch to be installed.

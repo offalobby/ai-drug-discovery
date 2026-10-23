@@ -32,3 +32,10 @@ curl -L -o data/HIV.csv https://deepchemdata.s3-us-west-1.amazonaws.com/datasets
 curl -L -o data/delaney-processed.csv https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/delaney-processed.csv
 curl -L -o data/clintox.csv.gz https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/clintox.csv.gz
 ```
+
+## Note on what is committed
+
+The raw CSVs are committed to this repository so it is self-contained and the exact bytes behind
+the reported results are available. They remain the property of their original sources and are
+redistributed here under the terms linked above; the hashes in the table let you verify they match
+the upstream files. The download commands above reproduce them from the original URLs.

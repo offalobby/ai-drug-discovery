@@ -1,0 +1,69 @@
+2026-10-23 01:17:22,810 train Audit: {'raw_rows': 41127, 'missing_smiles_or_label': 0, 'nonbinary_labels': 0, 'invalid_smiles': 0, 'parsed_valid_rows': 41127, 'unique_canonical_structures': 41127, 'structures_with_multiple_records': 0, 'redundant_duplicate_rows_removed': 0, 'conflicting_label_structures_removed': 0, 'conflicting_label_rows_removed': 0, 'clean_molecules': 41127, 'clean_actives': 1443, 'clean_active_fraction': 0.03508643956524911, 'source_activity_class_counts': {'CI': 39684, 'CM': 1039, 'CA': 404}}
+2026-10-23 01:17:22,975 deepchem.utils Skipped loading some Pytorch utilities, missing a dependency. No module named 'torch'
+2026-10-23 01:17:23,093 deepchem.feat.molecule_featurizers.rdkit_descriptors No normalization for SPS. Feature removed!
+2026-10-23 01:17:23,093 deepchem.feat.molecule_featurizers.rdkit_descriptors No normalization for AvgIpc. Feature removed!
+2026-10-23 01:17:23,246 deepchem.models Skipped loading some Tensorflow models, missing a dependency. No module named 'tensorflow'
+2026-10-23 01:17:23,354 deepchem.models Skipped loading some PyTorch models, missing a dependency. No module named 'torch'
+2026-10-23 01:17:23,369 deepchem.models No module named 'torch'
+2026-10-23 01:17:23,385 deepchem.models Skipped loading modules with pytorch-geometric dependency, missing a dependency. No module named 'torch'
+2026-10-23 01:17:23,394 deepchem.models Skipped loading modules with pytorch-lightning dependency, missing a dependency. No module named 'torch'
+2026-10-23 01:17:23,422 deepchem.models Skipped loading some Jax models, missing a dependency. No module named 'jax'
+2026-10-23 01:17:23,448 deepchem.metalearning Skipped loading some PyTorch models, missing a dependency. No module named 'tensorflow'
+2026-10-23 01:17:23,845 deepchem.splits.splitters About to generate scaffolds
+2026-10-23 01:17:23,846 deepchem.splits.splitters Generating scaffold 0/41127
+2026-10-23 01:17:24,768 deepchem.splits.splitters Generating scaffold 1000/41127
+2026-10-23 01:17:25,536 deepchem.splits.splitters Generating scaffold 2000/41127
+2026-10-23 01:17:26,481 deepchem.splits.splitters Generating scaffold 3000/41127
+2026-10-23 01:17:27,490 deepchem.splits.splitters Generating scaffold 4000/41127
+2026-10-23 01:17:28,623 deepchem.splits.splitters Generating scaffold 5000/41127
+2026-10-23 01:17:29,555 deepchem.splits.splitters Generating scaffold 6000/41127
+2026-10-23 01:17:30,442 deepchem.splits.splitters Generating scaffold 7000/41127
+2026-10-23 01:17:31,388 deepchem.splits.splitters Generating scaffold 8000/41127
+2026-10-23 01:17:32,486 deepchem.splits.splitters Generating scaffold 9000/41127
+2026-10-23 01:17:33,508 deepchem.splits.splitters Generating scaffold 10000/41127
+2026-10-23 01:17:34,425 deepchem.splits.splitters Generating scaffold 11000/41127
+2026-10-23 01:17:35,228 deepchem.splits.splitters Generating scaffold 12000/41127
+2026-10-23 01:17:36,105 deepchem.splits.splitters Generating scaffold 13000/41127
+2026-10-23 01:17:36,943 deepchem.splits.splitters Generating scaffold 14000/41127
+2026-10-23 01:17:37,781 deepchem.splits.splitters Generating scaffold 15000/41127
+2026-10-23 01:17:38,605 deepchem.splits.splitters Generating scaffold 16000/41127
+2026-10-23 01:17:39,581 deepchem.splits.splitters Generating scaffold 17000/41127
+2026-10-23 01:17:40,475 deepchem.splits.splitters Generating scaffold 18000/41127
+2026-10-23 01:17:41,562 deepchem.splits.splitters Generating scaffold 19000/41127
+2026-10-23 01:17:42,597 deepchem.splits.splitters Generating scaffold 20000/41127
+2026-10-23 01:17:43,626 deepchem.splits.splitters Generating scaffold 21000/41127
+2026-10-23 01:17:44,569 deepchem.splits.splitters Generating scaffold 22000/41127
+2026-10-23 01:17:45,521 deepchem.splits.splitters Generating scaffold 23000/41127
+2026-10-23 01:17:46,463 deepchem.splits.splitters Generating scaffold 24000/41127
+2026-10-23 01:17:47,520 deepchem.splits.splitters Generating scaffold 25000/41127
+2026-10-23 01:17:48,635 deepchem.splits.splitters Generating scaffold 26000/41127
+2026-10-23 01:17:49,536 deepchem.splits.splitters Generating scaffold 27000/41127
+2026-10-23 01:17:50,371 deepchem.splits.splitters Generating scaffold 28000/41127
+2026-10-23 01:17:51,298 deepchem.splits.splitters Generating scaffold 29000/41127
+2026-10-23 01:17:52,048 deepchem.splits.splitters Generating scaffold 30000/41127
+2026-10-23 01:17:52,780 deepchem.splits.splitters Generating scaffold 31000/41127
+2026-10-23 01:17:53,643 deepchem.splits.splitters Generating scaffold 32000/41127
+2026-10-23 01:17:54,534 deepchem.splits.splitters Generating scaffold 33000/41127
+2026-10-23 01:17:55,539 deepchem.splits.splitters Generating scaffold 34000/41127
+2026-10-23 01:17:56,484 deepchem.splits.splitters Generating scaffold 35000/41127
+2026-10-23 01:17:57,400 deepchem.splits.splitters Generating scaffold 36000/41127
+2026-10-23 01:17:58,274 deepchem.splits.splitters Generating scaffold 37000/41127
+2026-10-23 01:17:59,065 deepchem.splits.splitters Generating scaffold 38000/41127
+2026-10-23 01:17:59,898 deepchem.splits.splitters Generating scaffold 39000/41127
+2026-10-23 01:18:00,714 deepchem.splits.splitters Generating scaffold 40000/41127
+2026-10-23 01:18:01,713 deepchem.splits.splitters Generating scaffold 41000/41127
+2026-10-23 01:18:02,021 deepchem.splits.splitters About to sort in scaffold sets
+2026-10-23 01:18:39,836 train Splits: [{'split': 'train', 'n': 32901, 'actives': 1196, 'prevalence': 0.03635147867845962, 'unique_scaffolds': 10863}, {'split': 'valid', 'n': 4113, 'actives': 133, 'prevalence': 0.03233649404327741, 'unique_scaffolds': 4113}, {'split': 'test', 'n': 4113, 'actives': 114, 'prevalence': 0.027716994894237783, 'unique_scaffolds': 4113}]
+2026-10-23 01:19:08,066 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:20:08,401 train Validation rf_200trees_fulldepth_leaf1: AP=0.2955 EF@5%=9.43
+2026-10-23 01:20:08,403 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:22:05,186 train Validation rf_500trees_fulldepth_leaf3: AP=0.3127 EF@5%=9.46
+2026-10-23 01:22:05,187 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:22:49,622 train Validation rf_500trees_depth30_leaf1: AP=0.2654 EF@5%=8.41
+2026-10-23 01:22:49,622 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:23:29,877 train Selected by validation AP: rf_500trees_fulldepth_leaf3
+2026-10-23 01:23:29,908 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:25:02,572 train TEST rf_500trees_fulldepth_leaf3: AP=0.2975 ROC-AUC=0.7297 EF@5%=7.71
+2026-10-23 01:25:02,621 deepchem.models.sklearn_models.sklearn_model The model does not support training with weights.Hence, not using weight of datapoint for training
+2026-10-23 01:28:34,589 train Done in 701.2s; results in outputs
+This module requires PyTorch to be installed.

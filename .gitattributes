@@ -1,0 +1,8 @@
+# Keep the exact bytes of the raw datasets and generated results, so the SHA256 hashes in
+# data/README.md stay verifiable after a clone on any platform.
+*.csv -text
+*.csv.gz binary
+*.joblib binary
+*.png binary
+outputs/artifacts/*.txt -text
+outputs/**/artifacts/*.txt -text

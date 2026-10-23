@@ -1,0 +1,10 @@
+# CPU baseline dependencies (Python 3.10). Versions pinned for reproducibility.
+deepchem==2.8.0
+rdkit==2024.3.5
+scikit-learn==1.5.2
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.13.1
+matplotlib==3.9.2
+joblib==1.4.2
+pytest==8.3.3

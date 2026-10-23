@@ -1,0 +1,76 @@
+{
+  "budget_fraction": 0.05,
+  "n_selected": 206,
+  "test_activity_classes": {
+    "CI": 3999,
+    "CM": 89,
+    "CA": 25
+  },
+  "top5pct_activity_classes": {
+    "CI": 162,
+    "CM": 27,
+    "CA": 17
+  },
+  "recall_by_class": {
+    "CA": 0.68,
+    "CM": 0.30337078651685395
+  },
+  "top5pct_false_positives": 162,
+  "false_positive_top_scaffolds": {
+    "C(=CCCC1CCC2C(CCC3C4CCCC4CCC23)C1)CCC1CCC2C(CCC3C4CCCC4CCC23)C1": 1,
+    "O=P(CCCC1CCC2C(CCC3C4CCCC4CCC23)C1)(c1ccccc1)c1ccccc1": 1,
+    "O=C1CCNCC1CNC12CC3CC(CC(C3)C1)C2": 1,
+    "O=C1CCOc2c1c1c(c3oc(=O)ccc23)CCCO1": 1,
+    "O=C1CCOc2c3c(c4ccc(=O)oc4c21)OC=CC3c1ccccc1": 1,
+    "O=C1CCOc2cc(OS(=O)(=O)c3ccccc3)c3ccc(=O)oc3c21": 1,
+    "O=C1CCOc2ccc3c4c(c(=O)oc3c21)CCC4": 1,
+    "O=C1CCOc2ccc3c4c(c(=O)oc3c21)CCCC4": 1,
+    "O=C1CCSSCCNC(=O)CNC(=O)CNC(=O)CNC(=O)C2CCCN2C(=O)C(Cc2ccccc2)NC(=O)CNC(=O)CNC(=O)CNC(=O)CN1": 1,
+    "O=C1CCn2c(=S)[nH]c3cccc(c32)N1": 1
+  },
+  "false_positive_common_ring_signatures": {
+    "rings=3,aromatic=2": 21,
+    "rings=5,aromatic=3": 12,
+    "rings=3,aromatic=1": 11,
+    "rings=4,aromatic=2": 10,
+    "rings=4,aromatic=3": 10,
+    "rings=2,aromatic=1": 9,
+    "rings=4,aromatic=4": 8,
+    "rings=5,aromatic=5": 6,
+    "rings=2,aromatic=0": 5,
+    "rings=2,aromatic=2": 5
+  },
+  "property_medians": {
+    "top5pct": {
+      "MW": 562.3,
+      "logP": 4.23
+    },
+    "rest_of_test": {
+      "MW": 362.41,
+      "logP": 3.17
+    },
+    "top5pct_hits": {
+      "MW": 719.57,
+      "logP": 4.99
+    },
+    "top5pct_false_positives": {
+      "MW": 520.57,
+      "logP": 3.88
+    }
+  },
+  "similarity_medians": {
+    "top5pct_hits": 0.6779953917050692,
+    "top5pct_false_positives": 0.5430868609125893,
+    "missed_actives": 0.4349845201238389
+  },
+  "contains_metal_or_unusual_element": {
+    "top5pct_false_positives": 9,
+    "top5pct_hits": 2
+  },
+  "benchmark_stereo_variant_audit": {
+    "stereo_variant_groups": 0,
+    "molecules_in_those_groups": 0,
+    "groups_spanning_train_and_test": 0,
+    "groups_with_conflicting_labels": 0
+  }
+}

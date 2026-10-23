@@ -1,0 +1,443 @@
+{
+  "experiment": "HIV assay activity classification (MoleculeNet HIV)",
+  "protocol": {
+    "featurization": {
+      "type": "Morgan",
+      "radius": 2,
+      "fp_size": 2048,
+      "include_chirality": true
+    },
+    "split": "DeepChem ScaffoldSplitter 0.8/0.1/0.1 (deterministic, largest scaffold sets to train)",
+    "selection_metric": "validation average precision",
+    "config_set": "starter_package",
+    "candidates": {
+      "rf_150trees_depth18_leaf1": {
+        "n_estimators": 150,
+        "max_depth": 18,
+        "min_samples_leaf": 1,
+        "class_weight": "balanced_subsample",
+        "max_features": "sqrt"
+      },
+      "rf_200trees_depth24_leaf2": {
+        "n_estimators": 200,
+        "max_depth": 24,
+        "min_samples_leaf": 2,
+        "class_weight": "balanced_subsample",
+        "max_features": "sqrt"
+      },
+      "rf_250trees_fulldepth_leaf3": {
+        "n_estimators": 250,
+        "max_depth": null,
+        "min_samples_leaf": 3,
+        "class_weight": "balanced_subsample",
+        "max_features": "sqrt"
+      }
+    },
+    "seed": 42,
+    "final_fit": "train+valid",
+    "test_evaluations": 1
+  },
+  "environment": {
+    "run_utc": "2026-10-23T06:36:27.622489+00:00",
+    "python": "3.10.22",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "cpu_count": 22,
+    "rdkit": "2024.03.5",
+    "deepchem": "2.8.0",
+    "scikit_learn": "1.5.2",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.13.1"
+  },
+  "data_source": {
+    "path": "data/HIV.csv",
+    "url": "https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/HIV.csv",
+    "sha256": "9ffa7fe57dc86c342627ee1d5255e937e2ab812393c73c4d16c697022f6e1d22",
+    "bytes": 2193844,
+    "downloaded_this_run": false,
+    "file_modified_utc": "2026-10-23T06:01:54.833739+00:00"
+  },
+  "data_audit": {
+    "raw_rows": 41127,
+    "missing_smiles_or_label": 0,
+    "nonbinary_labels": 0,
+    "invalid_smiles": 0,
+    "invalid_smiles_examples": [],
+    "parsed_valid_rows": 41127,
+    "unique_canonical_structures": 41127,
+    "structures_with_multiple_records": 0,
+    "redundant_duplicate_rows_removed": 0,
+    "conflicting_label_structures_removed": 0,
+    "conflicting_label_rows_removed": 0,
+    "clean_molecules": 41127,
+    "clean_actives": 1443,
+    "clean_active_fraction": 0.03508643956524911,
+    "source_activity_class_counts": {
+      "CI": 39684,
+      "CM": 1039,
+      "CA": 404
+    },
+    "unique_scaffolds_total": 19089,
+    "acyclic_molecules_empty_scaffold": 1582,
+    "nonempty_scaffolds_shared_train_test": 0
+  },
+  "splits": [
+    {
+      "split": "train",
+      "n": 32901,
+      "actives": 1196,
+      "prevalence": 0.03635147867845962,
+      "unique_scaffolds": 10863
+    },
+    {
+      "split": "valid",
+      "n": 4113,
+      "actives": 133,
+      "prevalence": 0.03233649404327741,
+      "unique_scaffolds": 4113
+    },
+    {
+      "split": "test",
+      "n": 4113,
+      "actives": 114,
+      "prevalence": 0.027716994894237783,
+      "unique_scaffolds": 4113
+    }
+  ],
+  "validation_trials": [
+    {
+      "model": "rf_150trees_depth18_leaf1",
+      "n_estimators": 150.0,
+      "max_depth": 18.0,
+      "min_samples_leaf": 1.0,
+      "class_weight": "balanced_subsample",
+      "max_features": "sqrt",
+      "valid_average_precision": 0.265595767000451,
+      "valid_roc_auc": 0.7040068764877017,
+      "valid_ef@1%": 17.671321160042964,
+      "valid_ef@5%": 8.706985911380393,
+      "valid_ef@10%": 4.578673625812103,
+      "fit_seconds": 12.4,
+      "candidate_for_selection": true
+    },
+    {
+      "model": "rf_200trees_depth24_leaf2",
+      "n_estimators": 200.0,
+      "max_depth": 24.0,
+      "min_samples_leaf": 2.0,
+      "class_weight": "balanced_subsample",
+      "max_features": "sqrt",
+      "valid_average_precision": 0.29562532072140685,
+      "valid_roc_auc": 0.7658008085540484,
+      "valid_ef@1%": 17.671321160042964,
+      "valid_ef@5%": 9.007226804876268,
+      "valid_ef@10%": 5.029034966055916,
+      "fit_seconds": 17.9,
+      "candidate_for_selection": true
+    },
+    {
+      "model": "rf_250trees_fulldepth_leaf3",
+      "n_estimators": 250.0,
+      "max_depth": NaN,
+      "min_samples_leaf": 3.0,
+      "class_weight": "balanced_subsample",
+      "max_features": "sqrt",
+      "valid_average_precision": 0.32594464130022693,
+      "valid_roc_auc": 0.8007386556844373,
+      "valid_ef@1%": 16.93501611170784,
+      "valid_ef@5%": 9.607708591868018,
+      "valid_ef@10%": 5.6295167530476675,
+      "fit_seconds": 54.2,
+      "candidate_for_selection": true
+    },
+    {
+      "model": "logistic_regression_C0.1_balanced",
+      "n_estimators": NaN,
+      "max_depth": NaN,
+      "min_samples_leaf": NaN,
+      "class_weight": NaN,
+      "max_features": NaN,
+      "valid_average_precision": 0.2538249070214735,
+      "valid_roc_auc": 0.738221181093437,
+      "valid_ef@1%": 19.14393125671321,
+      "valid_ef@5%": 7.055660997153076,
+      "valid_ef@10%": 4.3534929556901965,
+      "fit_seconds": NaN,
+      "candidate_for_selection": false
+    },
+    {
+      "model": "heuristic_molecular_weight_desc",
+      "n_estimators": NaN,
+      "max_depth": NaN,
+      "min_samples_leaf": NaN,
+      "class_weight": NaN,
+      "max_features": NaN,
+      "valid_average_precision": 0.08665025757965353,
+      "valid_roc_auc": 0.6693136736313144,
+      "valid_ef@1%": 5.890440386680988,
+      "valid_ef@5%": 4.803854295934009,
+      "valid_ef@10%": 3.3777100518286005,
+      "fit_seconds": NaN,
+      "candidate_for_selection": false
+    }
+  ],
+  "selected_model": "rf_250trees_fulldepth_leaf3",
+  "test": {
+    "n": 4113,
+    "n_actives": 114,
+    "prevalence": 0.027716994894237783,
+    "roc_auc": 0.7258031613166449,
+    "average_precision": 0.29899215350698016,
+    "enrichment@1%": {
+      "fraction": 0.01,
+      "n_pool": 4113,
+      "n_actives": 114,
+      "n_selected": 42,
+      "hits": 26.0,
+      "precision": 0.6190476190476191,
+      "prevalence": 0.027716994894237783,
+      "expected_random_hits": 1.1641137855579868,
+      "enrichment_factor": 22.334586466165415,
+      "recall": 0.22807017543859648,
+      "random_p_value": 1.901169982206452e-31,
+      "random_hits_95pct_interval": [
+        0,
+        4
+      ]
+    },
+    "enrichment@5%": {
+      "fraction": 0.05,
+      "n_pool": 4113,
+      "n_actives": 114,
+      "n_selected": 206,
+      "hits": 45.0,
+      "precision": 0.21844660194174756,
+      "prevalence": 0.027716994894237783,
+      "expected_random_hits": 5.7097009482129835,
+      "enrichment_factor": 7.8813234542667345,
+      "recall": 0.39473684210526316,
+      "random_p_value": 1.7282328660423106e-30,
+      "random_hits_95pct_interval": [
+        2,
+        11
+      ]
+    },
+    "enrichment@10%": {
+      "fraction": 0.1,
+      "n_pool": 4113,
+      "n_actives": 114,
+      "n_selected": 412,
+      "hits": 54.0,
+      "precision": 0.13106796116504854,
+      "prevalence": 0.027716994894237783,
+      "expected_random_hits": 11.419401896425967,
+      "enrichment_factor": 4.72879407256004,
+      "recall": 0.47368421052631576,
+      "random_p_value": 2.2897361859304883e-25,
+      "random_hits_95pct_interval": [
+        6,
+        18
+      ]
+    },
+    "bootstrap": {
+      "ef@1%": {
+        "fraction": 0.01,
+        "n_boot_used": 2000,
+        "ci_low": 16.719049307187426,
+        "ci_high": 28.3269787329895,
+        "median": 22.44196428571429
+      },
+      "ef@5%": {
+        "fraction": 0.05,
+        "n_boot_used": 2000,
+        "ci_low": 6.184165306297792,
+        "ci_high": 9.571014408531603,
+        "median": 7.885738761524027
+      },
+      "ef@10%": {
+        "fraction": 0.1,
+        "n_boot_used": 2000,
+        "ci_low": 3.887189621101469,
+        "ci_high": 5.621632779629645,
+        "median": 4.724783220929371
+      }
+    }
+  },
+  "test_comparators": {
+    "logistic_regression_C0.1_balanced": {
+      "n": 4113,
+      "n_actives": 114,
+      "prevalence": 0.027716994894237783,
+      "roc_auc": 0.7144626068797902,
+      "average_precision": 0.19633975675801704,
+      "enrichment@1%": {
+        "fraction": 0.01,
+        "n_pool": 4113,
+        "n_actives": 114,
+        "n_selected": 42,
+        "hits": 19.0,
+        "precision": 0.4523809523809524,
+        "prevalence": 0.027716994894237783,
+        "expected_random_hits": 1.1641137855579868,
+        "enrichment_factor": 16.321428571428573,
+        "recall": 0.16666666666666666,
+        "random_p_value": 1.470295553284837e-19,
+        "random_hits_95pct_interval": [
+          0,
+          4
+        ]
+      },
+      "enrichment@5%": {
+        "fraction": 0.05,
+        "n_pool": 4113,
+        "n_actives": 114,
+        "n_selected": 206,
+        "hits": 36.0,
+        "precision": 0.17475728155339806,
+        "prevalence": 0.027716994894237783,
+        "expected_random_hits": 5.7097009482129835,
+        "enrichment_factor": 6.3050587634133874,
+        "recall": 0.3157894736842105,
+        "random_p_value": 1.6250614926546523e-20,
+        "random_hits_95pct_interval": [
+          2,
+          11
+        ]
+      },
+      "enrichment@10%": {
+        "fraction": 0.1,
+        "n_pool": 4113,
+        "n_actives": 114,
+        "n_selected": 412,
+        "hits": 50.0,
+        "precision": 0.12135922330097088,
+        "prevalence": 0.027716994894237783,
+        "expected_random_hits": 11.419401896425967,
+        "enrichment_factor": 4.378513030148186,
+        "recall": 0.43859649122807015,
+        "random_p_value": 1.2075622132921068e-21,
+        "random_hits_95pct_interval": [
+          6,
+          18
+        ]
+      }
+    },
+    "heuristic_molecular_weight_desc": {
+      "n": 4113,
+      "n_actives": 114,
+      "prevalence": 0.027716994894237783,
+      "roc_auc": 0.6641759123991524,
+      "average_precision": 0.07784261989157704,
+      "enrichment@1%": {
+        "fraction": 0.01,
+        "n_pool": 4113,
+        "n_actives": 114,
+        "n_selected": 42,
+        "hits": 8.0,
+        "precision": 0.19047619047619047,
+        "prevalence": 0.027716994894237783,
+        "expected_random_hits": 1.1641137855579868,
+        "enrichment_factor": 6.87218045112782,
+        "recall": 0.07017543859649122,
+        "random_p_value": 1.463770933524137e-05,
+        "random_hits_95pct_interval": [
+          0,
+          4
+        ]
+      },
+      "enrichment@5%": {
+        "fraction": 0.05,
+        "n_pool": 4113,
+        "n_actives": 114,
+        "n_selected": 206,
+        "hits": 23.0,
+        "precision": 0.11165048543689321,
+        "prevalence": 0.027716994894237783,
+        "expected_random_hits": 5.7097009482129835,
+        "enrichment_factor": 4.028231987736331,
+        "recall": 0.20175438596491227,
+        "random_p_value": 4.834261538880452e-09,
+        "random_hits_95pct_interval": [
+          2,
+          11
+        ]
+      },
+      "enrichment@10%": {
+        "fraction": 0.1,
+        "n_pool": 4113,
+        "n_actives": 114,
+        "n_selected": 412,
+        "hits": 35.0,
+        "precision": 0.08495145631067962,
+        "prevalence": 0.027716994894237783,
+        "expected_random_hits": 11.419401896425967,
+        "enrichment_factor": 3.06495912110373,
+        "recall": 0.30701754385964913,
+        "random_p_value": 4.285397236000643e-10,
+        "random_hits_95pct_interval": [
+          6,
+          18
+        ]
+      }
+    }
+  },
+  "error_analysis": {
+    "by_similarity": [
+      {
+        "bin": "[0.0, 0.3)",
+        "n": 543,
+        "actives": 15,
+        "roc_auc": 0.7400883838383838,
+        "average_precision": 0.14375243044739136,
+        "prevalence": 0.027624309392265192,
+        "ef_at_5pct": 6.464285714285714
+      },
+      {
+        "bin": "[0.3, 0.4)",
+        "n": 1183,
+        "actives": 25,
+        "roc_auc": 0.5741623488773748,
+        "average_precision": 0.06762749385020729,
+        "prevalence": 0.021132713440405747,
+        "ef_at_5pct": 2.366
+      },
+      {
+        "bin": "[0.4, 0.5)",
+        "n": 940,
+        "actives": 17,
+        "roc_auc": 0.6520935568160092,
+        "average_precision": 0.12843098907594733,
+        "prevalence": 0.018085106382978722,
+        "ef_at_5pct": 3.5294117647058822
+      },
+      {
+        "bin": "[0.5, 0.7)",
+        "n": 1070,
+        "actives": 39,
+        "roc_auc": 0.7450322067198885,
+        "average_precision": 0.38991409321231285,
+        "prevalence": 0.03644859813084112,
+        "ef_at_5pct": 9.653371320037987
+      },
+      {
+        "bin": "[0.7, 1.0)",
+        "n": 377,
+        "actives": 18,
+        "roc_auc": 0.9483132157226865,
+        "average_precision": 0.742122110688862,
+        "prevalence": 0.04774535809018567,
+        "ef_at_5pct": 14.330409356725147
+      }
+    ],
+    "median_similarity_test_to_train": 0.42857142857142855,
+    "top5pct_unique_scaffolds": 206,
+    "top5pct_hits_unique_scaffolds": 45,
+    "top5pct_median_similarity": 0.5822077922077922,
+    "top5pct_hits_median_similarity": 0.6774193548387096,
+    "spearman_score_vs_similarity": -0.05557829399480508,
+    "actives_scored_zero": 0,
+    "molecules_scored_zero": 0
+  },
+  "runtime_seconds": 461.8
+}

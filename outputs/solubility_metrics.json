@@ -1,0 +1,207 @@
+{
+  "experiment": "ESOL measured aqueous solubility regression",
+  "target_units": "log10(mol/L), measured; no target normalization",
+  "protocol": {
+    "split": "DeepChem ScaffoldSplitter 0.8/0.1/0.1",
+    "selection_metric": "validation MAE",
+    "featurization": {
+      "radius": 2,
+      "fp_size": 2048,
+      "descriptors": [
+        "MW",
+        "logP",
+        "TPSA",
+        "HBD",
+        "HBA",
+        "rotatable_bonds",
+        "rings",
+        "aromatic_rings",
+        "heavy_atoms",
+        "fraction_csp3"
+      ]
+    },
+    "seed": 42,
+    "final_fit": "train+valid"
+  },
+  "environment": {
+    "run_utc": "2026-10-23T06:07:21.567108+00:00",
+    "python": "3.10.22",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "cpu_count": 22,
+    "rdkit": "2024.03.5",
+    "deepchem": "2.8.0",
+    "scikit_learn": "1.5.2",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.13.1"
+  },
+  "data_source": {
+    "path": "data/delaney-processed.csv",
+    "url": "https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/delaney-processed.csv",
+    "sha256": "8c06a76f0c6487d29ab0f903e6a7a7139f189ab3c1178f159c8be8964602f189",
+    "bytes": 96699,
+    "downloaded_this_run": false,
+    "file_modified_utc": "2026-10-23T06:01:55.251744+00:00"
+  },
+  "data_audit": {
+    "raw_rows": 1128,
+    "missing_smiles_or_target": 0,
+    "invalid_smiles": 0,
+    "parsed_valid_rows": 1128,
+    "unique_canonical_structures": 1117,
+    "structures_with_multiple_records": 11,
+    "duplicate_rows_averaged_away": 10,
+    "inconsistent_duplicate_structures_removed": 1,
+    "clean_molecules": 1116,
+    "target_mean": -3.053306451612903,
+    "target_std": 2.0935810715882486,
+    "target_min": -11.6,
+    "target_max": 1.58
+  },
+  "splits": [
+    {
+      "split": "train",
+      "n": 892,
+      "target_mean": -2.876025784753363,
+      "target_std": 2.069796234746556
+    },
+    {
+      "split": "valid",
+      "n": 112,
+      "target_mean": -3.6695892857142858,
+      "target_std": 2.30198970440159
+    },
+    {
+      "split": "test",
+      "n": 112,
+      "target_mean": -3.8489375000000003,
+      "target_std": 1.7185456646394046
+    }
+  ],
+  "trials": [
+    {
+      "model": "mean_baseline",
+      "features": "fingerprint",
+      "valid_mae": 1.8237614109545164,
+      "valid_rmse": 2.4349331878366347,
+      "valid_r2": -0.11883835064543735,
+      "test_mae": 1.496445236909505,
+      "test_rmse": 1.9327542632795582,
+      "test_r2": -0.26482699676704025,
+      "selected": false
+    },
+    {
+      "model": "ridge_fp_alpha1",
+      "features": "fingerprint",
+      "valid_mae": 1.5258787259941724,
+      "valid_rmse": 1.9299156007301543,
+      "valid_r2": 0.2971382980974062,
+      "test_mae": 1.6757451557060767,
+      "test_rmse": 2.1444347719598835,
+      "test_r2": -0.5570534755110379,
+      "selected": false
+    },
+    {
+      "model": "ridge_fp_alpha10",
+      "features": "fingerprint",
+      "valid_mae": 1.2512009790805645,
+      "valid_rmse": 1.6114423584538906,
+      "valid_r2": 0.509969855386853,
+      "test_mae": 1.2693787371880514,
+      "test_rmse": 1.6138431671590872,
+      "test_r2": 0.11813825679014667,
+      "selected": false
+    },
+    {
+      "model": "ridge_fp_alpha100",
+      "features": "fingerprint",
+      "valid_mae": 1.4143317280119203,
+      "valid_rmse": 1.8259778268474767,
+      "valid_r2": 0.37080647424907465,
+      "test_mae": 1.2056362846169615,
+      "test_rmse": 1.5384784889478065,
+      "test_r2": 0.1985790272468585,
+      "selected": false
+    },
+    {
+      "model": "rf_fp_leaf1",
+      "features": "fingerprint",
+      "valid_mae": 1.3234748711036983,
+      "valid_rmse": 1.6866018847924629,
+      "valid_r2": 0.46319270537682444,
+      "test_mae": 1.1603135702522676,
+      "test_rmse": 1.5297439321921786,
+      "test_r2": 0.20765316895556218,
+      "selected": false
+    },
+    {
+      "model": "rf_fp_leaf1_allfeatures",
+      "features": "fingerprint",
+      "valid_mae": 1.3653165738172544,
+      "valid_rmse": 1.7468996062721251,
+      "valid_r2": 0.42412378700581255,
+      "test_mae": 1.1447982074263046,
+      "test_rmse": 1.5469587031882928,
+      "test_r2": 0.18971968699850184,
+      "selected": false
+    },
+    {
+      "model": "rf_descriptors",
+      "features": "descriptors",
+      "valid_mae": 0.7421234918974362,
+      "valid_rmse": 0.9902180393713885,
+      "valid_r2": 0.814964561407767,
+      "test_mae": 0.6435584495925705,
+      "test_rmse": 0.809125748623084,
+      "test_r2": 0.7783284844245761,
+      "selected": false
+    },
+    {
+      "model": "rf_fp_plus_descriptors",
+      "features": "fingerprint+descriptors",
+      "valid_mae": 0.721491910714285,
+      "valid_rmse": 0.9614098448558495,
+      "valid_r2": 0.8255743395221871,
+      "test_mae": 0.5984738392857148,
+      "test_rmse": 0.7493468662993181,
+      "test_r2": 0.8098730690531932,
+      "selected": true
+    }
+  ],
+  "selected_model": "rf_fp_plus_descriptors",
+  "test": {
+    "n": 112,
+    "mae": 0.5984738392857148,
+    "rmse": 0.7493468662993181,
+    "r2": 0.8098730690531932,
+    "bootstrap_95ci": {
+      "mae": [
+        0.5171928303571428,
+        0.6834184508928568
+      ],
+      "rmse": [
+        0.6540652453835137,
+        0.8504604016456178
+      ],
+      "r2": [
+        0.7464096778758609,
+        0.8535009302874285
+      ]
+    },
+    "mae_improvement_vs_mean_baseline": {
+      "point": 0.8979713976237901,
+      "bootstrap_95ci": [
+        0.683096719505905,
+        1.116754635620019
+      ]
+    }
+  },
+  "test_mean_baseline": {
+    "n": 112,
+    "mae": 1.496445236909505,
+    "rmse": 1.9327542632795582,
+    "r2": -0.26482699676704025
+  },
+  "runtime_seconds": 27.1
+}

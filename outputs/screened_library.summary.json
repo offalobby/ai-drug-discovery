@@ -1,0 +1,175 @@
+{
+  "library": "data/sample_library.csv",
+  "library_sha256": "ab79014668d6ba5581d4ad06eff5d5ff682a227e24956be5783b95aaf2aceb69",
+  "model_config": "rf_500trees_fulldepth_leaf3",
+  "filtering": {
+    "input_rows": 18,
+    "invalid_removed": 1,
+    "dummy_atom_structures_removed": 0,
+    "duplicates_removed": 1,
+    "benchmark_overlap": 5,
+    "ranked": 11
+  },
+  "score_quantiles": {
+    "0.5": 0.058456342366754704,
+    "0.9": 0.1271745714660456,
+    "0.99": 0.23179818160940052
+  },
+  "top10": [
+    {
+      "rank": 1,
+      "name": "lamivudine",
+      "smiles": "Nc1ccn([C@@H]2CS[C@H](CO)O2)c(=O)n1",
+      "score": 0.24342302718088435,
+      "max_tanimoto_to_training": 0.35714285714285715,
+      "MW": 229.261,
+      "logP": -0.5941000000000001,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 2,
+      "name": "nicotinamide",
+      "smiles": "NC(=O)c1cccnc1",
+      "score": 0.1271745714660456,
+      "max_tanimoto_to_training": 0.5483870967741935,
+      "MW": 122.12699999999997,
+      "logP": 0.18050000000000016,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 3,
+      "name": "benzamide",
+      "smiles": "NC(=O)c1ccccc1",
+      "score": 0.11092140598733566,
+      "max_tanimoto_to_training": 0.55,
+      "MW": 121.13899999999995,
+      "logP": 0.7855000000000001,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 4,
+      "name": "metformin",
+      "smiles": "CN(C)C(=N)NC(=N)N",
+      "score": 0.09069624456828494,
+      "max_tanimoto_to_training": 0.6363636363636364,
+      "MW": 129.167,
+      "logP": -1.034159999999999,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 5,
+      "name": "caffeine",
+      "smiles": "Cn1c(=O)c2c(ncn2C)n(C)c1=O",
+      "score": 0.09013141822685387,
+      "max_tanimoto_to_training": 0.5789473684210527,
+      "MW": 194.194,
+      "logP": -1.0293,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 6,
+      "name": "paracetamol",
+      "smiles": "CC(=O)Nc1ccc(O)cc1",
+      "score": 0.058456342366754704,
+      "max_tanimoto_to_training": 0.64,
+      "MW": 151.165,
+      "logP": 1.3505999999999998,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 7,
+      "name": "efavirenz",
+      "smiles": "O=C1Nc2ccc(Cl)cc2[C@@](C#CC2CC2)(C(F)(F)F)O1",
+      "score": 0.055575420613259555,
+      "max_tanimoto_to_training": 0.3114754098360656,
+      "MW": 315.67799999999994,
+      "logP": 4.073100000000001,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 8,
+      "name": "pyridine",
+      "smiles": "c1ccncc1",
+      "score": 0.04890603921247911,
+      "max_tanimoto_to_training": 0.3103448275862069,
+      "MW": 79.10199999999998,
+      "logP": 1.0816,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 9,
+      "name": "benzene",
+      "smiles": "c1ccccc1",
+      "score": 0.038969869047734064,
+      "max_tanimoto_to_training": 0.25,
+      "MW": 78.11399999999999,
+      "logP": 1.6866,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 10,
+      "name": "aniline",
+      "smiles": "Nc1ccccc1",
+      "score": 0.012214514601193672,
+      "max_tanimoto_to_training": 0.5,
+      "MW": 93.12899999999999,
+      "logP": 1.2688000000000001,
+      "passes_rule_of_five": true
+    }
+  ],
+  "top10_unique_scaffolds": 6,
+  "diverse_shortlist": [
+    {
+      "rank": 1,
+      "name": "lamivudine",
+      "score": 0.24342302718088435
+    },
+    {
+      "rank": 2,
+      "name": "nicotinamide",
+      "score": 0.1271745714660456
+    },
+    {
+      "rank": 3,
+      "name": "benzamide",
+      "score": 0.11092140598733566
+    },
+    {
+      "rank": 4,
+      "name": "metformin",
+      "score": 0.09069624456828494
+    },
+    {
+      "rank": 5,
+      "name": "caffeine",
+      "score": 0.09013141822685387
+    },
+    {
+      "rank": 6,
+      "name": "paracetamol",
+      "score": 0.058456342366754704
+    },
+    {
+      "rank": 7,
+      "name": "efavirenz",
+      "score": 0.055575420613259555
+    },
+    {
+      "rank": 8,
+      "name": "pyridine",
+      "score": 0.04890603921247911
+    },
+    {
+      "rank": 9,
+      "name": "benzene",
+      "score": 0.038969869047734064
+    },
+    {
+      "rank": 10,
+      "name": "aniline",
+      "score": 0.012214514601193672
+    }
+  ],
+  "top10_median_similarity_to_training": 0.5241935483870968,
+  "library_median_similarity_to_training": 0.5
+}

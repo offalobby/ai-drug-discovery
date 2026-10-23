@@ -1,0 +1,175 @@
+{
+  "library": "data/clintox.csv.gz",
+  "library_sha256": "7324a84a180ad9068d3847677c85d58e8432e82b3ae6ac95cf0e98b3a58d9697",
+  "model_config": "rf_500trees_fulldepth_leaf3",
+  "filtering": {
+    "input_rows": 1484,
+    "invalid_removed": 4,
+    "dummy_atom_structures_removed": 1,
+    "duplicates_removed": 19,
+    "benchmark_overlap": 100,
+    "ranked": 1360
+  },
+  "score_quantiles": {
+    "0.5": 0.11901606059689687,
+    "0.9": 0.19437162604964742,
+    "0.99": 0.2783547679541523
+  },
+  "top10": [
+    {
+      "rank": 1,
+      "name": "LIB01028",
+      "smiles": "Cc1cn([C@@H]2C[C@@H](O)[C@H](CO)O2)c(=O)[nH]c1=O",
+      "score": 0.48605921160619203,
+      "max_tanimoto_to_training": 0.6,
+      "MW": 242.23099999999997,
+      "logP": -1.5142799999999992,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 2,
+      "name": "LIB00632",
+      "smiles": "C[NH+]1CCCCC1CCN1c2ccccc2Sc2ccc(S(C)=O)cc21",
+      "score": 0.40892998751274795,
+      "max_tanimoto_to_training": 0.6724137931034483,
+      "MW": 387.59400000000016,
+      "logP": 3.4840000000000027,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 3,
+      "name": "LIB01184",
+      "smiles": "C=CCC1(C(C)CCC)C(=O)NC(S)=[NH+]C1=O",
+      "score": 0.34808613008365774,
+      "max_tanimoto_to_training": 0.3,
+      "MW": 255.363,
+      "logP": 0.007899999999999963,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 4,
+      "name": "LIB00934",
+      "smiles": "CS(=O)(=O)O.Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+      "score": 0.3475153491987226,
+      "max_tanimoto_to_training": 0.35526315789473684,
+      "MW": 589.7220000000003,
+      "logP": 4.094320000000002,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 5,
+      "name": "LIB00932",
+      "smiles": "Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cccnc5)n4)c3)cc(C(F)(F)F)c2)cn1",
+      "score": 0.33450725389874547,
+      "max_tanimoto_to_training": 0.2988505747126437,
+      "MW": 529.5260000000001,
+      "logP": 6.355840000000005,
+      "passes_rule_of_five": false
+    },
+    {
+      "rank": 6,
+      "name": "LIB01002",
+      "smiles": "CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1.Cc1ccc(S(=O)(=O)O)cc1",
+      "score": 0.32955989884491893,
+      "max_tanimoto_to_training": 0.5131578947368421,
+      "MW": 637.0360000000003,
+      "logP": 6.791420000000006,
+      "passes_rule_of_five": false
+    },
+    {
+      "rank": 7,
+      "name": "LIB01005",
+      "smiles": "Cc1ccc(NC(=O)c2ccc(CN3CC[NH+](C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+      "score": 0.32328687624892677,
+      "max_tanimoto_to_training": 0.36486486486486486,
+      "MW": 494.6230000000002,
+      "logP": 3.1732200000000015,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 8,
+      "name": "LIB00933",
+      "smiles": "Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+      "score": 0.3050638001146394,
+      "max_tanimoto_to_training": 0.375,
+      "MW": 493.6150000000002,
+      "logP": 4.590320000000004,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 9,
+      "name": "LIB00943",
+      "smiles": "Cc1oncc1C(=O)Nc1ccc(C(F)(F)F)cc1",
+      "score": 0.3025222604268925,
+      "max_tanimoto_to_training": 0.4418604651162791,
+      "MW": 270.21,
+      "logP": 3.2541200000000012,
+      "passes_rule_of_five": true
+    },
+    {
+      "rank": 10,
+      "name": "LIB00114",
+      "smiles": "O=c1[nH]c(=O)n([C@H]2C[C@H](O)[C@@H](CO)O2)cc1F",
+      "score": 0.29228475220016065,
+      "max_tanimoto_to_training": 0.5957446808510638,
+      "MW": 246.194,
+      "logP": -1.6836,
+      "passes_rule_of_five": true
+    }
+  ],
+  "top10_unique_scaffolds": 8,
+  "diverse_shortlist": [
+    {
+      "rank": 1,
+      "name": "LIB01028",
+      "score": 0.48605921160619203
+    },
+    {
+      "rank": 2,
+      "name": "LIB00632",
+      "score": 0.40892998751274795
+    },
+    {
+      "rank": 3,
+      "name": "LIB01184",
+      "score": 0.34808613008365774
+    },
+    {
+      "rank": 4,
+      "name": "LIB00934",
+      "score": 0.3475153491987226
+    },
+    {
+      "rank": 5,
+      "name": "LIB00932",
+      "score": 0.33450725389874547
+    },
+    {
+      "rank": 6,
+      "name": "LIB01002",
+      "score": 0.32955989884491893
+    },
+    {
+      "rank": 9,
+      "name": "LIB00943",
+      "score": 0.3025222604268925
+    },
+    {
+      "rank": 10,
+      "name": "LIB00114",
+      "score": 0.29228475220016065
+    },
+    {
+      "rank": 11,
+      "name": "LIB00110",
+      "score": 0.28911574995171524
+    },
+    {
+      "rank": 12,
+      "name": "LIB00931",
+      "score": 0.2848494750875482
+    }
+  ],
+  "top10_median_similarity_to_training": 0.40843023255813954,
+  "library_median_similarity_to_training": 0.354502688172043
+}
